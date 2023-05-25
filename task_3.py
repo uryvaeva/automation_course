@@ -49,8 +49,7 @@ class Bus(PublicTransport):
 
     @park.setter
     def park(self, value):
-        assert value >= 1000
-        assert value <= 9999
+        assert 1000 <= value <= 9999, 'Номер парка не входит в диапазон от 1000 до 9999'
         self.__park = value
 
 class Tram(PublicTransport):

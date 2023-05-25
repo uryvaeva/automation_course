@@ -29,15 +29,13 @@ class PersonInfo:
         self.name = name
         self.age = age
         self.departments = departments
-        self.path = None
 
     def short_name(self):
         first_name, last_name = self.name.split( )
         return last_name + " " + first_name[0] + "."
 
     def path_deps(self):
-        self.path = list(self.departments)
-        path_arrows = " --> ".join(self.path)
+        path_arrows = " --> ".join(self.departments)
         return path_arrows
 
     def new_salary(self):
