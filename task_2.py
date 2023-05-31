@@ -28,7 +28,7 @@ class Trigon:
         for arg in self.args:
             if arg <= 0:
                 raise ValueError('Стороны должны быть положительными')
-        if self.args[0] + self.args[1] < self.args[2] or self.args[1] + self.args[2] < self.args[0] or self.args[0] + self.args[2] < self.args[1]:
+        if self.args[0] + self.args[1] <= self.args[2] or self.args[1] + self.args[2] <= self.args[0] or self.args[0] + self.args[2] <= self.args[1]:
             raise Exception('Не треугольник')
 
 
