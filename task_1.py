@@ -24,12 +24,8 @@ def treatment_sum(our_tuple):
         return tuple_sum
     except TypeError:
         return 'Нельзя сложить эти данные'
-    except ValueError as ValueErrorText:
-        return str(ValueErrorText)
     except Exception as e:
-        if len(our_tuple) < 2:  # на случай, если в Exception попадёт исключение, не предусмотренное в задании
             return 'Недостаточно данных'
-        raise e
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
