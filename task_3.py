@@ -13,8 +13,6 @@ for purchase in purchases_data:
         purchase_list.append(int(price))
     purchases.append(purchase_list)
 
-sum_list = [sum(sublist) for sublist in purchases]
-
-three_most_expensive_purchases = sum(sorted(sum_list, reverse=True) [:3])
+three_most_expensive_purchases = sum(sorted([sum(sublist) for sublist in purchases], reverse=True) [:3])
 
 assert three_most_expensive_purchases == 202346

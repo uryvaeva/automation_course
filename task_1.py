@@ -4,10 +4,11 @@
 
 
 with open("test_file/task1_data.txt", encoding='utf-8') as text_origin:
-    text_finish = '\n'.join([
+    lines = [
         ''.join([char for char in line if not char.isnumeric()]).strip()
-        for line in text_origin
-    ])
+        for line in text_origin.readlines()
+    ]
+    text_finish = '\n'.join(lines)
 
 with open("test_file/task1_answer.txt", 'w' , encoding='utf-8') as ethalon_file:
     ethalon_file.write(text_finish)

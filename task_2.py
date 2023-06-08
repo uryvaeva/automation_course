@@ -39,17 +39,11 @@ def func_log(file_log='log.txt'):
         def wrapper(*args, **kwargs):
             timestamp = datetime.datetime.now().strftime('%d.%m %H:%M:%S')
             log_message = f"{func.__name__} вызвана {timestamp}\n"
-
-
             with open(file_log, mode='a+', encoding='utf-8') as log_file:
                 log_file.write(log_message)
-
             return func(*args, **kwargs)
-
         return wrapper
-
     return decorator_func_log
-
 
 
 @func_log()
